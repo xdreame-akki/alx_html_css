@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  position: relative;
+  background-color: black;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  background: transparent;
+}
+
+header img {
+  width: 161px;
+  height: 32px;
+}
+
+/* Toggle Button (Hamburger) */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+  color: #ff6565;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("assets/headphones_hero_1.jpg");
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+/* Hero Content */
+.hero-section-content {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.hero-section-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-section-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.hero-section-content button {
+  background-color: #ff6565;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  padding: 10px 25px;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.hero-section-content button:hover,
+.hero-section-content button:active {
+  opacity: 0.9;
+}
+
+.what-we-do {
+  background-color: white;
+  color: #071629;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.what-we-do .title {
+  text-align: center;
+  font-size: 16px;
+  width: 50%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  gap: 20px;
+}
+.what-item {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.what-we-do .what-item img {
+  width: 55px;
+  height: 55px;
+  margin: 20px auto;
+}
+.what-item > p {
+  font-size: 14px;
+  text-align: center;
+}
+.our-results {
+  background-image: url("assets/headphones_hero_2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.our-results-content {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.our-results-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.min-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item img {
+  width: 190px;
+  height: 190px;
+}
+
+.relatives {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.relatives h1 {
+  font-size: 46px;
+  margin: 0;
+}
+
+.relatives p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ✅ Mobile Responsive */
+@media screen and (max-width: 480px) {
+  .our-results-content {
+    bottom: 30px;
+    padding: 0 1rem;
+  }
+
+  .our-results-content p {
+    font-size: 14px;
+  }
+
+  .item img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .relatives h1 {
+    font-size: 18px;
+  }
+
+  .relatives p {
+    font-size: 12px;
+  }
+}
+
+/* ----------------- */
+/* Responsive Styles */
+/* ----------------- */
+@media screen and (max-width: 480px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    display: none; /* Hide by default */
+  }
+
+  nav.nav-open {
+    display: flex;
+  }
+
+  .hero-section {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-section-content {
+    bottom: 30px;
+    padding: 0 1rem;
+  }
+
+  .hero-section-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-section-content p {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .hero-section-content button {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+}
+.contact-section {
+  background-color: white; /* dark background */
+  color: black;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  color: black;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ccc;
+  color: black;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #010101;
+}
+
+.contact-form button {
+  padding: 12px 25px;
+  background-color: #ff6565;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.contact-form button:hover,
+.contact-form button:active {
+  opacity: 0.9;
+}
+
+/* ✅ Responsive */
+@media screen and (max-width: 480px) {
+  .contact-container h2 {
+    font-size: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 200px;
+  background-color: #071629;
+  align-items: center;
+}
+footer > img {
+  width: 161px;
+  height: 32px;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pentagon {
+  width: 150px;
+  height: 150px;
+  background-color: #ff6565;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceScale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
